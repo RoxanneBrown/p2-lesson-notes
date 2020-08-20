@@ -8,6 +8,7 @@ function preload() {
 
 function setup() {
   createCanvas(600, 300);
+  background(color(0, 0, 255));
   game.setupGame();
 }
 
@@ -25,4 +26,10 @@ function keyPressed() {
     console.log("down arrow has been pressed");
     game.y += 10;
   }
+}
+
+function mouseClicked() {
+  console.log("click the mouse", mouseX, mouseY);
+  game.mouseX = mouseX;
+  game.mouseY = mouseY;
 }
